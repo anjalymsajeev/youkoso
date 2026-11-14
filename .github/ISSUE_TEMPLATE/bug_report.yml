@@ -1,0 +1,56 @@
+name: Bug report
+description: Something in youkoso does not work as documented.
+labels: ["type:bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug. Please search existing issues first.
+        For security vulnerabilities, do **not** open an issue; see SECURITY.md.
+  - type: input
+    id: version
+    attributes:
+      label: youkoso version
+      placeholder: "0.1.0-alpha01"
+    validations:
+      required: true
+  - type: dropdown
+    id: module
+    attributes:
+      label: Module
+      multiple: true
+      options:
+        - youkoso-core
+        - youkoso-compose
+        - youkoso-material3
+        - youkoso-datastore
+        - sample
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the bug and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps or code to reproduce
+      description: A minimal composable or project that shows the problem is the fastest way to a fix.
+      render: kotlin
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Device or emulator, Android version, Compose BOM version, AGP and Kotlin versions.
+      placeholder: "Pixel 9 emulator, Android 16, Compose BOM 2026.09.00, AGP 9.5.1, Kotlin 2.4.21"
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or stack trace
+      render: text
