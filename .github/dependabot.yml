@@ -1,0 +1,31 @@
+version: 2
+updates:
+  - package-ecosystem: gradle
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    groups:
+      kotlin-and-compose-compiler:
+        patterns:
+          - "org.jetbrains.kotlin*"
+      android-gradle-plugin:
+        patterns:
+          - "com.android.tools.build*"
+          - "com.android.application"
+          - "com.android.library"
+      androidx:
+        patterns:
+          - "androidx.*"
+      build-tooling:
+        patterns:
+          - "org.jetbrains.dokka*"
+          - "com.diffplug.spotless*"
+          - "com.pinterest.ktlint*"
+          - "org.jetbrains.kotlinx.binary-compatibility-validator*"
+          - "org.jetbrains.kotlinx:binary-compatibility-validator"
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
