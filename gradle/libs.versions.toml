@@ -6,7 +6,7 @@ targetSdk = "37"
 jvmTarget = "17"
 
 # Build tooling
-agp = "9.5.1"
+agp = "9.5.2"
 kotlin = "2.4.21"
 dokka = "2.3.0"
 spotless = "8.11.0"
